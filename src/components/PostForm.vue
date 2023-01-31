@@ -9,6 +9,7 @@
 <!--          placeholder="Название"-->
 <!--      />     -->
 
+      <h1>Создание поста</h1>
       <my-input
           v-model="post.title"
           placeholder="Название"
@@ -41,6 +42,14 @@ export default {
         body: ''
       }
 
+    }
+  },
+  watch: {
+    post: {
+      handler(newVal) {
+        console.log(newVal)
+      },
+      deep: true
     }
   }
 }
