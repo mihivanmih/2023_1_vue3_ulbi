@@ -6,11 +6,12 @@
   </div>
   <div class="post__btns">
     <my-button @click="$emit('remove', post)">удалить</my-button>
+    <my-button @click="$router.push(`/posts/${post.id}`)">Открыть</my-button>
   </div>
 </template>
 
 <script>
-//import MyButton from '@/components/UI/MyButton'
+import MyButton from '@/components/UI/MyButton'
 export default {
   // components: {
   //   MyButton
